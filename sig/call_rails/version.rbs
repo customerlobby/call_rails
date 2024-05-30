@@ -1,0 +1,9 @@
+module CallRails
+  class Version
+    MAJOR: Integer
+    MINOR: Integer
+    PATCH: Integer
+
+    def self.to_s: () -> string
+  end
+end

@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+module CallRails
+  extend Configuration
+
+  # Alias for CallRails::Client.new
+  # @return [CallRails::Client]
+  def self.client: (?::Hash[untyped, untyped] options) -> CallRails::Client
+
+  # Delegate to CallRails::Client
+  def self.method_missing: (untyped method, *untyped args) { () -> untyped } -> untyped
+end

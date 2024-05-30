@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+module CallRails
+  class Client
+    # module to fetch Accounts
+    module Calls
+      def calls: (String, ?::Hash[untyped, untyped] params) -> ::Hash[untyped, untyped]
+
+      def call: (String, String, ?::Hash[untyped, untyped] params) -> ::Hash[untyped, untyped]
+
+      def summary: (String, ?::Hash[untyped, untyped] params) -> ::Hash[untyped, untyped]
+    end
+  end
+end

@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+module CallRails
+  module HttpUtils
+    module Connection
+      private
+
+      def connection: () -> untyped
+    end
+  end
+end

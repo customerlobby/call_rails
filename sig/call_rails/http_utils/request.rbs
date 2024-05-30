@@ -1,0 +1,19 @@
+# frozen_string_literal: true
+
+# Defines HTTP request methods
+module CallRails
+  module HttpUtils
+    # Defines HTTP request methods
+    module Request
+      # Perform an HTTP GET request
+      def get: (String path, ?::Hash[untyped, untyped] options) -> Hash[untyped, untyped]
+
+      # Perform an HTTP POST request
+      def post: (String path, ?::Hash[untyped, untyped] options) -> Hash[untyped, untyped]
+
+      private
+
+      def request: (Symbol method, String path, ?::Hash[untyped, untyped] options) -> Hash[untyped, untyped]
+    end
+  end
+end

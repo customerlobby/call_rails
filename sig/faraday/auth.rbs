@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+
+module FaradayMiddleware
+  class CallRailsOAuth < Faraday::Middleware
+    @app: untyped
+
+    @access_token: String
+
+    def initialize: (untyped app, String access_token) -> void
+
+    def call: (untyped env) -> untyped
+  end
+end

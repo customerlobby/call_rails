@@ -1,0 +1,27 @@
+module CallRails
+  module Configuration
+    VALID_OPTIONS_KEYS: ::Array[:api_key | :api_version | :adapter | :endpoint]
+
+    # By default don't set the api key.
+    DEFAULT_API_KEY: nil
+
+    # Use the default Faraday adapter.
+    DEFAULT_ADAPTER: untyped
+
+    # By default use the main api URL.
+    DEFAULT_ENDPOINT: string
+
+    DEFAULT_API_VERSION: string
+
+    # Convenience method to allow configuration options to be set in a block
+    def configure: () { (untyped) -> untyped } -> untyped
+
+    def options: () -> ::Hash[:api_key | :api_version | :adapter | :endpoint, untyped]
+
+    # When this module is extended, reset all settings.
+    def self.extended: (Configuration base) -> untyped
+
+    # Reset all configuration settings to default values.
+    def reset: () -> untyped
+  end
+end

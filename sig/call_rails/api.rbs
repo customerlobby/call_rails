@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+module CallRails
+  class API
+    include HttpUtils::Request
+    include HttpUtils::Connection
+
+    def initialize: (?::Hash[untyped, untyped] options) -> void
+
+    def config: () -> untyped
+  end
+end
